@@ -1,0 +1,229 @@
+/*section-styles*/
+.code {
+    height: auto;
+}
+
+.bottom-skill {
+    height: auto;
+    margin: 10vh 0 10vh 0;
+}
+
+/*flex-parent*/
+.flex-parent {
+    margin: 5vh 0 5vh 0;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-parent-2{
+    margin: 5vh 0 5vh 0;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;!important;
+}
+
+/*text-boxen*/
+.text-box {
+    text-align: center;
+    justify-content: center;
+    width: 50vh;
+    font-size: 25px;
+    margin: 3vw;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.text-box-head {
+    text-align: center;
+    justify-content: center;
+    width: 70vh;
+    font-size: 25px;
+    margin: 3vw;
+    padding: 20px;
+    font-weight: 400;
+}
+
+/*Img-boxen*/
+.img-box{
+    text-align: center;
+    justify-content: center;
+    width: 70vh;
+    font-size: 25px;
+    margin: 3vw;
+    padding: 20px;
+    font-weight: 300;
+}
+.img-box img {
+    width: 100%;
+    height: auto;
+    size: 100px;
+    border-radius: 10px;
+}
+
+.code-head {
+    font-size: 35px;
+!important;
+}
+
+.code-head2 {
+    font-size: 30px;
+!important;
+    font-weight: 400;
+}
+
+/*SVG-Code*/
+.svg-code {
+    justify-content: center;
+    display: block;
+    text-align: center;
+    width: 70vh;
+    height: auto;
+    padding: 20px;
+}
+
+.svg-code svg {
+    width: 100%;
+}
+
+/*Skillbar*/
+.skill-bar {
+    width: 60vh;
+    margin: 3vw;
+    padding: 20px;
+}
+
+.skill-bar p {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.list li {
+    position: relative;
+    list-style: none;
+    margin: 50px 0;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.list li:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    border-radius: 1000px;
+}
+
+.list li:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    border-radius: 1000px;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*color of each li*/
+.html:before {
+    background-image: linear-gradient(to right, rgba(195, 20, 50, 0.5), rgba(36, 11, 54, 0.5));
+}
+
+.css:before {
+    background-image: linear-gradient(to right, rgba(17, 153, 142, 0.5), rgba(52, 239, 204, 0.5));
+}
+
+.js:before {
+    background-image: linear-gradient(to right, rgba(241, 39, 17, 0.5), rgba(245, 175, 25, 0.5));
+}
+
+.cSharp:before {
+    background-image: linear-gradient(to right, rgba(15, 12, 41, 0.5), rgba(48, 43, 99, 0.5), rgba(36, 36, 62, 0.5));
+}
+
+.java:before {
+    background-image: linear-gradient(to right, rgba(192, 36, 37, 0.5), rgba(240, 203, 53, 0.5));
+}
+
+.python:before {
+    background-image: linear-gradient(to right, rgba(82, 194, 52, 0.5), rgba(6, 23, 0, 0.5));
+}
+
+/*animation*/
+.html:after {
+    animation-name: html;
+    background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
+}
+
+@keyframes html {
+    to {
+        width: 95%;
+    }
+}
+
+.css:after {
+    animation-name: css;
+    background-image: linear-gradient(to right, rgb(17, 153, 142), rgb(52, 239, 204));
+}
+
+@keyframes css {
+    to {
+        width: 80%;
+    }
+}
+
+.js:after {
+    animation-name: js;
+    background-image: linear-gradient(to right, rgb(241, 39, 17), rgb(245, 175, 25));
+}
+
+@keyframes js {
+    to {
+        width: 40%;
+    }
+}
+
+.cSharp:after {
+    animation-name: cSharp;
+    background-image: linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+}
+
+@keyframes cSharp {
+    to {
+        width: 60%;
+    }
+}
+
+.java:after {
+    animation-name: java;
+    background-image: linear-gradient(to right, rgb(192, 36, 37), rgb(240, 203, 53));
+}
+
+@keyframes java {
+    to {
+        width: 80%;
+    }
+}
+
+.python:after {
+    animation-name: python;
+    background-image: linear-gradient(to right, rgb(82, 194, 52), rgb(6, 23, 0));
+}
+
+@keyframes python {
+    to {
+        width: 20%;
+    }
+}

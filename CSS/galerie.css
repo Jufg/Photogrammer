@@ -1,0 +1,47 @@
+.galerie {
+    margin: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+}
+
+.galerie div {
+    -ms-flex: auto;
+    flex: auto;
+    width: 300px;
+    margin: 3vh;
+}
+
+.galerie div img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.img {
+    filter: grayscale(100%);
+    transition: 1s;
+    margin: 5vh;
+}
+
+.img:hover {
+    filter: grayscale(0%);
+
+}
+
+.head {
+    font-weight: 900;
+    font-size: 30px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 1700px) {
+    .galerie div {
+        margin: 5vh;
+    }
+}

@@ -1,0 +1,60 @@
+/*Camera-svg*/
+#points-Camera {
+    animation: points-Camera 2s ease-in-out infinite alternate;
+    transform-origin: top;
+}
+
+#points-pic {
+    animation: points-pic 6s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+/*Keyframes*/
+@keyframes points-Camera {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(30deg);
+    }
+}
+
+@keyframes points-pic {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*code-svg*/
+#arrow-left {
+    animation: arrow-left 3s ease-in-out infinite alternate;
+    transform-origin: left;
+}
+
+#arrow-right {
+    animation: arrow-right 3s ease-in-out infinite alternate;
+    transform-origin: right;
+}
+
+/*Keyframes*/
+@keyframes arrow-left {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(20deg);
+    }
+}
+
+@keyframes arrow-right {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(20deg);
+    }
+}

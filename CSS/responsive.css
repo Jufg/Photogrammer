@@ -1,4 +1,4 @@
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     /* Navbar*/
     .hamburger div {
         width: 30px;
@@ -37,8 +37,8 @@
     }
 
     .navlist.open {
-        clip-path: circle(2000px at 90% -10%);
-        -webkit-clip-path: circle(2000px at 90% -10%);
+        clip-path: circle(3000px at 90% -10%);
+        -webkit-clip-path: circle(3000px at 90% -10%);
         pointer-events: all;
     }
 

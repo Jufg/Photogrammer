@@ -2,7 +2,7 @@
 Ich stelle in diesme Repository den Code zum Download und zur Inspiration zur Verfügung.
 ___
 > ## Website:
-> Hier geht zur Webseite: [photogrammer.dev](https://photogrammer.dev)
+> Hier geht es zur Webseite: [photogrammer.dev](https://photogrammer.dev)
 >
 > ## E-Mail:
 >

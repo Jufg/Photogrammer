@@ -19,14 +19,15 @@
     align-items: center;
 }
 
-.flex-parent-2{
+.flex-parent-2 {
     margin: 5vh 0 5vh 0;
     width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap-reverse;!important;
+    flex-wrap: wrap-reverse;
+!important;
 }
 
 /*text-boxen*/
@@ -51,7 +52,7 @@
 }
 
 /*Img-boxen*/
-.img-box{
+.img-box {
     text-align: center;
     justify-content: center;
     width: 70vh;
@@ -60,6 +61,7 @@
     padding: 20px;
     font-weight: 300;
 }
+
 .img-box img {
     width: 100%;
     height: auto;
@@ -169,7 +171,7 @@
 
 @keyframes html {
     to {
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -180,7 +182,7 @@
 
 @keyframes css {
     to {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -191,7 +193,7 @@
 
 @keyframes js {
     to {
-        width: 40%;
+        width: 85%;
     }
 }
 

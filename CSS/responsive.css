@@ -1,15 +1,19 @@
 @media screen and (max-width: 1000px) {
     /* Navbar*/
     .hamburger div {
-        width: 30px;
-        height: 3px;
+        width: 50px;
+        height: 6px;
         background: white;
-        margin: 5px;
+        margin: 10px;
         transition: all .6s ease;
     }
 
     nav {
         position: relative;
+    }
+
+    .navbar {
+        height: 7vh;
     }
 
     .hamburger {
@@ -51,7 +55,7 @@
     }
 
     .navlist li a {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .navlist li:nth-child(1) {
@@ -80,7 +84,7 @@
 }
 
 .x .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-10px, 12px);
 }
 
 .x .line2 {
@@ -88,7 +92,7 @@
 }
 
 .x .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-10px, -12px);
 }
 
 .blur {

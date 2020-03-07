@@ -28,10 +28,10 @@ ___
 ___
 > ## Urheberbennenung:
 > ### Grafiken:
-> Alle Vektor-Grafiken, die auf dieser Webseite genutzt werden, stammen von der Online-Plattform Undraw.co.
+> Alle Vektor-Grafiken, die auf dieser Webseite genutzt werden, stammen von der Online-Plattform [Undraw.co](https://Undraw.co/).
 >
 > ### Icons:
-> Alle verwendeten Icons dieser Webseite sind von der Online-Plattform fonawesomme.com.
+> Alle verwendeten Icons dieser Webseite sind von der Online-Plattform [fonawesomme.com](https://fontawesome.com/).
 >
 > ### Code:
 > Die Lightbox in meiner Galerie wurde von [Lokesh Dhakar](https://lokeshdhakar.com/projects/lightbox2/) erstellt.

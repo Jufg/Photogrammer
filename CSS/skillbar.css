@@ -151,6 +151,14 @@
     background-image: linear-gradient(to right, rgba(241, 39, 17, 0.5), rgba(245, 175, 25, 0.5));
 }
 
+.NodeJs:before {
+    background-image: linear-gradient(to right, rgba(86, 171, 47, 0.5), rgba(168, 224, 99, 0.5));
+}
+
+.react:before {
+    background-image: linear-gradient(160deg, rgba(0, 147, 233, 0.5) 0%, rgba(128, 208, 199, 0.5) 100%);
+}
+
 .cSharp:before {
     background-image: linear-gradient(to right, rgba(15, 12, 41, 0.5), rgba(48, 43, 99, 0.5), rgba(36, 36, 62, 0.5));
 }
@@ -182,7 +190,7 @@
 
 @keyframes css {
     to {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -193,7 +201,30 @@
 
 @keyframes js {
     to {
+        width: 90%;
+    }
+}
+
+.NodeJs:after {
+    animation-name: NodeJS;
+    background-image: linear-gradient(to right, rgb(86, 171, 47), rgb(86, 171, 47));
+}
+
+@keyframes NodeJS {
+    to {
         width: 85%;
+    }
+}
+
+.react:after {
+    animation-name: react;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80d0c7 100%);
+
+}
+
+@keyframes react {
+    to {
+        width: 50%;
     }
 }
 

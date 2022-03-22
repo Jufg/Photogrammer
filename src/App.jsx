@@ -1,14 +1,23 @@
+import React from "react";
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Error_page_404, Gallery, Home, Imprint, Portfolio, Publications, Wallpaper} from "./pages";
 
-const App = () => {
+function App() {
 
-    return (<div className="App">
-            <header className="App-header">
-                <h1 className="text-3xl font-bold underline">
-                    Hello world!
-                </h1>
-            </header>
-        </div>);
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/wallpaper" element={<Wallpaper />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/publications" element={<Publications />} />
+                <Route path="/Imprint" element={<Imprint />} />
+                <Route path="*" element={<Error_page_404 />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

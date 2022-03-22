@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const Imprint = () => {
 
     return (
-        <p>Imprint</p>
+        <Layout>
+            <p>Imprint</p>
+        </Layout>
     )
 }
 

@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const Portfolio = () => {
 
     return (
-        <p>Portfolio</p>
+        <Layout>
+            <p>Portfolio</p>
+        </Layout>
     )
 }
 

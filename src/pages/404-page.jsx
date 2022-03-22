@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const ErrorPage404 = () => {
 
     return (
-        <p>ErrorPage404</p>
+        <Layout>
+            <p>ErrorPage404</p>
+        </Layout>
     )
 }
 

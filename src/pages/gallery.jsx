@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const Gallery = () => {
 
     return (
-        <p>Gallery</p>
+        <Layout>
+            <p>Gallery</p>
+        </Layout>
     )
 }
 

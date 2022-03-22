@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const Publications = () => {
 
     return (
-        <p>Publications</p>
+        <Layout>
+            <p>Publications</p>
+        </Layout>
     )
 }
 

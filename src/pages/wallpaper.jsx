@@ -1,9 +1,12 @@
 import React from "react";
+import {Layout} from "../components";
 
 const Wallpaper = () => {
 
     return (
-        <p>Wallpaper</p>
+        <Layout>
+            <p>Wallpaper</p>
+        </Layout>
     )
 }
 

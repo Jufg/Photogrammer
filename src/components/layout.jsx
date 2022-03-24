@@ -4,7 +4,7 @@ import {Footer, Header} from "./index";
 const Layout = (props) => {
 
     return (
-        <div className="test">
+        <div className="px-4 md:px-[20%]">
             <Header/>
             {props.children}
             <Footer/>

@@ -13,7 +13,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/publications" element={<Publications />} />
-                <Route path="/Imprint" element={<Imprint />} />
+                <Route path="/imprint" element={<Imprint />} />
                 <Route path="*" element={<Error_page_404 />} />
             </Routes>
         </Router>

@@ -5,9 +5,9 @@ const Home = () => {
 
     return (
         <Layout>
-            <div>
+            <section className="h-screen px-4 md:px-[20%]">
                 <h1>Home</h1>
-            </div>
+            </section>
         </Layout>
     );
 }

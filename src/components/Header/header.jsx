@@ -25,7 +25,7 @@ const Header = () => {
     ];
 
     return (
-        <div className="pt-28">
+        <div className="pt-28 px-4 md:px-[20%]">
             <nav className="w-auto flex justify-between items-baseline">
                 <div className="">
                     <span className="font-medium text-xl xl:text-4xl"><a href="/">Photogrammer</a></span>

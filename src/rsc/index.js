@@ -1,0 +1,1 @@
+export {default as home_svg} from './svg/home.svg';

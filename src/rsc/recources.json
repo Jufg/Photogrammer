@@ -1,0 +1,35 @@
+{
+  "name": "IPFS - Recources",
+  "rsc": [
+    {
+      "type": "img",
+      "small": [
+        {
+          "name": "IMG_corse_sm",
+          "pages": [
+            "home",
+            "wallpaper"
+          ],
+          "cid": "bafybeihksywwcfivi7jh6rjmx5kuatzlnm6grihhe4k2wq3uum42yuwgyy"
+        },
+        {
+          "name": "IMG_lambo_sm",
+          "pages": [
+            "home",
+            "wallpaper"
+          ],
+          "cid": "bafybeib5nrwhs2py4zfyi3nicfjceuhqdqacqfwwqmlvsv7bf4wsadwc2q"
+        },
+        {
+          "name": "IMG_monaco_sm",
+          "pages": [
+            "home",
+            "wallpaper"
+          ],
+          "cid": "bafybeib4bxe74ppoukef7olckiaqcnizsh4uirg3ui5v47wcodm7e5oueq"
+        }
+      ],
+      "original": []
+    }
+  ]
+}

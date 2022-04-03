@@ -3,6 +3,8 @@ import {Layout} from "../components";
 import {corse_img, lambo_img, monaco_img} from "../rsc/img";
 import {home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
 import {useNavigate} from "react-router-dom";
+import {useFetchCid, useFetchImg} from "../hooks/useFetch";
+import {isElementType} from "@testing-library/user-event/dist/utils";
 
 const Home = () => {
 
@@ -31,6 +33,12 @@ const SectionHome = () => {
 
 const SectionWallpaper = () => {
 
+    const images = [
+        useFetchCid(useFetchImg('IMG_corse_sm', 'sm').cid),
+        useFetchCid(useFetchImg('IMG_monaco_sm', 'sm').cid),
+        useFetchCid(useFetchImg('IMG_lambo_sm', 'sm').cid)
+    ]
+
     const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
     return (
@@ -41,15 +49,12 @@ const SectionWallpaper = () => {
                     <h3 className="font-light md:text-2xl">Downnload your Wallpaper now!</h3>
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
-                    <a href="/wallpaper" className={imgStyles}>
-                        <img src={corse_img} alt="corse img" className="rounded-2xl"/>
-                    </a>
-                    <a href="/wallpaper" className={imgStyles}>
-                        <img src={monaco_img} alt="corse img" className="rounded-2xl"/>
-                    </a>
-                    <a href="/wallpaper" className={imgStyles}>
-                        <img src={lambo_img} alt="corse img" className="rounded-2xl"/>
-                    </a>
+                    {images.map((item, index) => (
+                        <a href="/wallpaper" className={imgStyles}>
+                            <img src={`https://ipfs.io/ipfs/${item}`} alt="alt"
+                                 className="rounded-2xl"/>
+                        </a>
+                    ))}
                 </div>
                 <div>
                     <img src={wallpaper_svg} alt="wallpaper svg"
@@ -57,7 +62,8 @@ const SectionWallpaper = () => {
                 </div>
             </div>
         </section>
-    );
+    )
+        ;
 }
 
 const SectionPortfolio = () => {

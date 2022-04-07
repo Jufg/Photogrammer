@@ -3,8 +3,7 @@ import {Layout} from "../components";
 import {corse_img, lambo_img, monaco_img} from "../rsc/img";
 import {home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
 import {useNavigate} from "react-router-dom";
-import {useFetchCid, useFetchImg} from "../hooks/useFetch";
-import {isElementType} from "@testing-library/user-event/dist/utils";
+import {useFetchImg} from "../hooks/useFetch";
 
 const Home = () => {
 
@@ -33,11 +32,7 @@ const SectionHome = () => {
 
 const SectionWallpaper = () => {
 
-    const images = [
-        useFetchCid(useFetchImg('IMG_corse_sm', 'sm').cid),
-        useFetchCid(useFetchImg('IMG_monaco_sm', 'sm').cid),
-        useFetchCid(useFetchImg('IMG_lambo_sm', 'sm').cid)
-    ]
+    const images = useFetchImg(["home", "wallpaper"], 'sm');
 
     const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
@@ -50,8 +45,8 @@ const SectionWallpaper = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
                     {images.map((item, index) => (
-                        <a href="/wallpaper" className={imgStyles}>
-                            <img src={`https://ipfs.io/ipfs/${item}`} alt="alt"
+                        <a key={index} href="/wallpaper" className={imgStyles}>
+                            <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt="alt"
                                  className="rounded-2xl"/>
                         </a>
                     ))}

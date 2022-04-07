@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {Web3Storage} from "web3.storage";
 import rsc from '../rsc/recources.json';
 
-
 const APIKEY = process.env.REACT_APP_WEB3_STORAGE_API;
 
 const makeStorageClient = () => {
@@ -11,7 +10,49 @@ const makeStorageClient = () => {
 
 const client = makeStorageClient()
 
-export const useFetchCid = (cid) => {
+export const useFetchImg = (pages, size) => {
+
+    let array = [];
+
+    switch (size) {
+        case 'sm':
+            rsc.rsc[0].small.map(async (item, index) => {
+                if (arraysEqual(item.pages, pages)) {
+
+                    let img = {
+                        name: item.name,
+                        cid: item.cid,
+                        img_cid: FetchCid(item.cid)
+                    }
+
+                    array.push(img)
+                }
+            })
+
+            return array
+        case 'og':
+            rsc.rsc[0].original.map(async (item, index) => {
+                if (arraysEqual(item.pages, pages)) {
+
+                    let img = {
+                        index,
+                        name: item.name,
+                        cid: item.cid,
+                        img_cid: FetchCid(item.cid)
+                    }
+
+                    array.push(img)
+                }
+            })
+
+            break;
+        default:
+            return 'Not found.';
+    }
+
+}
+
+export const FetchCid = (cid) => {
     const [fileCid, setFileCid] = useState("");
 
     const retrieve = async (cid) => {
@@ -37,13 +78,13 @@ export const useFetchCid = (cid) => {
     return fileCid;
 };
 
-export const useFetchImg = (name, size) => {
-    switch (size){
-        case 'sm':
-            return rsc.rsc[0].small.find(obj => obj.name === name);
-        case 'og':
-            return rsc.rsc[0].original.find(obj => obj.name === name);
-        default:
-            return 'Not found.';
+const arraysEqual = (a, b) => {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length !== b.length) return false;
+
+    for (let i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) return false;
     }
+    return true;
 }

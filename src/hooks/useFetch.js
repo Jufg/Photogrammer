@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Web3Storage} from "web3.storage";
 import rsc from '../rsc/recources.json';
+import {arraysEqual} from "../utils/array.utils";
 
 const APIKEY = process.env.REACT_APP_WEB3_STORAGE_API;
 
@@ -21,6 +22,7 @@ export const useFetchImg = (pages, size) => {
 
                     let img = {
                         name: item.name,
+                        alt: item.alt,
                         cid: item.cid,
                         img_cid: FetchCid(item.cid)
                     }
@@ -29,7 +31,7 @@ export const useFetchImg = (pages, size) => {
                 }
             })
 
-            return array
+            return array;
         case 'og':
             rsc.rsc[0].original.map(async (item, index) => {
                 if (arraysEqual(item.pages, pages)) {
@@ -37,6 +39,7 @@ export const useFetchImg = (pages, size) => {
                     let img = {
                         index,
                         name: item.name,
+                        alt: item.alt,
                         cid: item.cid,
                         img_cid: FetchCid(item.cid)
                     }
@@ -45,7 +48,7 @@ export const useFetchImg = (pages, size) => {
                 }
             })
 
-            break;
+            return array;
         default:
             return 'Not found.';
     }
@@ -77,14 +80,3 @@ export const FetchCid = (cid) => {
 
     return fileCid;
 };
-
-const arraysEqual = (a, b) => {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length !== b.length) return false;
-
-    for (let i = 0; i < a.length; ++i) {
-        if (a[i] !== b[i]) return false;
-    }
-    return true;
-}

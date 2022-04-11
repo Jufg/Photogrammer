@@ -6,6 +6,7 @@
       "small": [
         {
           "name": "IMG_corse_sm",
+          "alt": "The Coast of Corsica",
           "pages": [
             "home",
             "wallpaper"
@@ -14,6 +15,7 @@
         },
         {
           "name": "IMG_lambo_sm",
+          "alt": "Lamborghini in Hamburg",
           "pages": [
             "home",
             "wallpaper"
@@ -22,14 +24,34 @@
         },
         {
           "name": "IMG_monaco_sm",
+          "alt": "Sunrise in Monaco",
           "pages": [
             "home",
             "wallpaper"
           ],
           "cid": "bafybeib4bxe74ppoukef7olckiaqcnizsh4uirg3ui5v47wcodm7e5oueq"
+        },
+        {
+          "name": "IMG_vespa_sm",
+          "alt": "Vespa in Bonifacio",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeih5h7spoqpjpm4wfsccmonvqflcpmy7lo6qqsk5hubakmtjdsdil4"
         }
       ],
-      "original": []
+      "original": [
+        {
+          "name": "IMG_vespa_og",
+          "alt": "Vespa in Bonifacio",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeiaw7ojdxyzsy5gm64xyd2bbtrsbdoadlqlk26nm723asq35mxhdje"
+        }
+      ]
     }
   ]
 }

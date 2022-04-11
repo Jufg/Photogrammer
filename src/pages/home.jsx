@@ -1,33 +1,30 @@
 import React from "react";
 import {Layout} from "../components";
-import {corse_img, lambo_img, monaco_img} from "../rsc/img";
 import {home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
 import {useNavigate} from "react-router-dom";
 import {useFetchImg} from "../hooks/useFetch";
+import {arraySplit} from "../utils/array.utils";
 
 const Home = () => {
 
-    return (
-        <Layout>
-            <SectionHome/>
-            <SectionWallpaper/>
-            <SectionPortfolio/>
-        </Layout>
-    );
+    return (<Layout>
+        <SectionHome/>
+        <SectionWallpaper/>
+        <SectionPortfolio/>
+        <SectionGallery/>
+    </Layout>);
 }
 
 const SectionHome = () => {
-    return (
-        <section id="home" className="md:h-screen px-4 md:px-[20%] mt-20 mb-20">
-            <div className="w-full flex justify-center md:justify-end">
-                <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
-            </div>
-            <div className="h-fit mt-[33%] md:mt-0">
-                <h1 className="font-medium text-3xl md:text-5xl mb-2">Photogramming</h1>
-                <h2 className="font-light text-xl md:text-3xl">Photography and Programming</h2>
-            </div>
-        </section>
-    );
+    return (<section id="home" className="md:h-screen px-4 md:px-[20%] mt-20 mb-20">
+        <div className="w-full flex justify-center md:justify-end">
+            <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
+        </div>
+        <div className="h-fit mt-[33%] md:mt-0">
+            <h1 className="font-medium text-3xl md:text-5xl mb-2">Photogramming</h1>
+            <h2 className="font-light text-xl md:text-3xl">Photography and Programming</h2>
+        </div>
+    </section>);
 }
 
 const SectionWallpaper = () => {
@@ -36,29 +33,24 @@ const SectionWallpaper = () => {
 
     const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
-    return (
-        <section id="Wallpaper" className="md:h-screen px-4 md:px-[20%]">
-            <div className="flex flex-col w-full">
-                <div className="h-fit w-fit self-end flex flex-col items-end">
-                    <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Wallpaper</h2>
-                    <h3 className="font-light md:text-2xl">Downnload your Wallpaper now!</h3>
-                </div>
-                <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
-                    {images.map((item, index) => (
-                        <a key={index} href="/wallpaper" className={imgStyles}>
-                            <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt="alt"
-                                 className="rounded-2xl"/>
-                        </a>
-                    ))}
-                </div>
-                <div>
-                    <img src={wallpaper_svg} alt="wallpaper svg"
-                         className="w-1/3 scale-[2] md:scale-150 -z-10 -translate-y-1/2  md:-translate-y-1/4 translate-x-1/4 md:-translate-x-1/4"/>
-                </div>
+    return (<section id="Wallpaper" className="md:h-screen px-4 md:px-[20%]">
+        <div className="flex flex-col w-full">
+            <div className="h-fit w-fit self-end flex flex-col items-end">
+                <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Wallpaper</h2>
+                <h3 className="font-light md:text-2xl">Downnload your Wallpaper now!</h3>
             </div>
-        </section>
-    )
-        ;
+            <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
+                {images.map((item, index) => (<a key={index} href="/wallpaper" className={imgStyles}>
+                    <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
+                         className="rounded-2xl"/>
+                </a>))}
+            </div>
+            <div>
+                <img src={wallpaper_svg} alt="wallpaper svg"
+                     className="w-1/3 scale-[2] md:scale-150 -z-10 -translate-y-1/2  md:-translate-y-1/4 translate-x-1/4 md:-translate-x-1/4"/>
+            </div>
+        </div>
+    </section>);
 }
 
 const SectionPortfolio = () => {
@@ -73,7 +65,7 @@ const SectionPortfolio = () => {
     }
 
     return (
-        <section id="portfolio" className="h-screen mt-10 px-4 md:px-[20%] bg-[#1B1A20] text-white pt-5 md:pt-[15vh]">
+        <section id="portfolio" className="h-screen mt-10 px-4 md:px-[20%] bg-[#1B1A20] text-white pt-5 md:pt-[10vh]">
             <div className="flex flex-col w-full h-[100%]">
                 <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Portfolio</h2>
                 <h3 className="font-light md:text-2xl text-white/80">&#60;Web-development and <br/>Blockchain based
@@ -94,8 +86,35 @@ const SectionPortfolio = () => {
                     </div>
                 </div>
             </div>
-        </section>
-    );
+        </section>);
+}
+
+const SectionGallery = () => {
+    
+    const images = arraySplit(useFetchImg(["home", "gallery"], 'sm'),3);
+    
+    const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+
+    return (<section id="Gallery" className=" min-h-screen px-4 pt-5 md:pt-[10vh] md:px-[20%]">
+        <div className="flex flex-col w-full">
+            <div className="h-fit w-fit self-end flex flex-col items-end">
+                <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Gallery</h2>
+                <h3 className="font-light md:text-2xl">Some Images i took...</h3>
+            </div>
+
+            {images.map((item, index) => (
+                <div key={index} className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
+                    {item.map((item, index) => (
+                        <a key={index} href="/gallery" className={imgStyles}>
+                            <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
+                                 className="rounded-2xl"/>
+                        </a>
+                    ))}
+                </div>
+            ))}
+
+        </div>
+    </section>)
 }
 
 export default Home

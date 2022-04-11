@@ -15,8 +15,8 @@ const Home = () => {
     </Layout>);
 }
 
-const SectionHome = () => {
-    return (<section id="home" className="md:h-screen px-4 md:px-[20%] mt-20 mb-20">
+const SectionHome = () =>   {
+    return (<section id="home" className="md:h-screen px-6 md:px-[20%] mt-20 mb-20">
         <div className="w-full flex justify-center md:justify-end">
             <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
         </div>
@@ -31,9 +31,9 @@ const SectionWallpaper = () => {
 
     const images = useFetchImg(["home", "wallpaper"], 'sm');
 
-    const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+    const imgStyles = 'w-2/3 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
-    return (<section id="Wallpaper" className="md:h-screen px-4 md:px-[20%]">
+    return (<section id="Wallpaper" className="md:h-screen px-6 md:px-[20%]">
         <div className="flex flex-col w-full">
             <div className="h-fit w-fit self-end flex flex-col items-end">
                 <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Wallpaper</h2>
@@ -65,13 +65,13 @@ const SectionPortfolio = () => {
     }
 
     return (
-        <section id="portfolio" className="h-screen mt-10 px-4 md:px-[20%] bg-[#1B1A20] text-white pt-5 md:pt-[10vh]">
+        <section id="portfolio" className="h-screen mt-10 px-6 md:px-[20%] bg-[#1B1A20] text-white pt-12 md:pt-[10vh]">
             <div className="flex flex-col w-full h-[100%]">
                 <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Portfolio</h2>
                 <h3 className="font-light md:text-2xl text-white/80">&#60;Web-development and <br/>Blockchain based
                     projects/></h3>
                 <div className="flex flex-col md:flex-row w-full h-full mt-10 md:mt-0">
-                    <div className="w-full py-20 md:py-0 md:w-1/2 flex flex-row justify-center">
+                    <div className="w-full pt-20 md:pt-0 md:w-1/2 flex flex-row justify-center">
                         <div className="flex flex-col justify-center">
                             <button
                                 onClick={routeChange}
@@ -90,29 +90,29 @@ const SectionPortfolio = () => {
 }
 
 const SectionGallery = () => {
-    
-    const images = arraySplit(useFetchImg(["home", "gallery"], 'sm'),3);
-    
-    const imgStyles = 'w-1/2 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
-    return (<section id="Gallery" className=" min-h-screen px-4 pt-5 md:pt-[10vh] md:px-[20%]">
-        <div className="flex flex-col w-full">
+    const images = arraySplit(useFetchImg(["home", "gallery"], 'sm'), 3);
+
+    const imgStyles = 'w-auto md:w-1/4 my-4 px-5 md:px-0 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+
+    return (<section id="Gallery" className="px-6 pt-5 md:pt-[10vh] md:px-[20%]">
+        <div className="flex flex-col w-full mb-[5%]">
             <div className="h-fit w-fit self-end flex flex-col items-end">
                 <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Gallery</h2>
                 <h3 className="font-light md:text-2xl">Some Images i took...</h3>
             </div>
-
-            {images.map((item, index) => (
-                <div key={index} className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
-                    {item.map((item, index) => (
-                        <a key={index} href="/gallery" className={imgStyles}>
-                            <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
-                                 className="rounded-2xl"/>
-                        </a>
-                    ))}
-                </div>
-            ))}
-
+            <div className="flex flex-col mt-10">
+                {images.map((item, index) => (
+                    <div key={index} className="flex flex-col md:flex-row items-center justify-between py-0 md:py-10 px-4 z-10">
+                        {item.map((item, index) => (
+                            <a key={index} href="/gallery" className={imgStyles}>
+                                <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
+                                     className="rounded-2xl"/>
+                            </a>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     </section>)
 }

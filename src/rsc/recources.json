@@ -39,6 +39,51 @@
             "gallery"
           ],
           "cid": "bafybeih5h7spoqpjpm4wfsccmonvqflcpmy7lo6qqsk5hubakmtjdsdil4"
+        },
+        {
+          "name": "IMG_espresso_0_sm",
+          "alt": "Espresso cups with coffee maker (1)",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeiaksyrwp2pa3kf4wllruvvn33rvnar2ss2bc4w6boxkvbjxxxkjcq"
+        },
+        {
+          "name": "IMG_espresso_1_sm",
+          "alt": "Espresso cups with coffee maker (2)",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeiee37xnec52rikkjcqrcyhdcuxrnsed6nyq2odedxzdfljdrpzmc4"
+        },
+        {
+          "name": "IMG_malmö_0_sm",
+          "alt": "House in the city of malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeicysln5pjk4vycbiargmgjg3uwdddwau7oialgy27d4saq2o7r64q"
+        },
+        {
+          "name": "IMG_malmö_1_sm",
+          "alt": "Lighthouse in malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeih5k5c377esfso266gnjnx6cs4zkqcfrthgbxluvqcusrrrzp45n4"
+        },
+        {
+          "name": "IMG_malmö_2_sm",
+          "alt": "Architecture in malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeigmexql24xhsgpck4k6g7pn2sxu5asicqamzzvqdayz6k57jpirxq"
         }
       ],
       "original": [
@@ -50,6 +95,51 @@
             "gallery"
           ],
           "cid": "bafybeiaw7ojdxyzsy5gm64xyd2bbtrsbdoadlqlk26nm723asq35mxhdje"
+        },
+        {
+          "name": "IMG_espresso_0_og",
+          "alt": "Espresso cups with coffee maker (1)",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeig2akgkwa4g7cbtju6map3ypec7onl6t4se2muvpohp6chpsesyla"
+        },
+        {
+          "name": "IMG_espresso_1_og",
+          "alt": "Espresso cups with coffee maker (2)",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeicy4kw42j44gx374euztvcznliriungke46f7rzfqcj4ujems762q"
+        },
+        {
+          "name": "IMG_malmö_0_og",
+          "alt": "House in the city of malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeihayjnvxwasraegczwhmlakmw4eluc6siu76poongs3i3niyoxroy"
+        },
+        {
+          "name": "IMG_malmö_1_og",
+          "alt": "Lighthouse in malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeicrnfgphuizof7qvs76t5furgilp43mq6dgrdzwobmrhbaagdse24"
+        },
+        {
+          "name": "IMG_malmö_2_og",
+          "alt": "Architecture in malmö",
+          "pages": [
+            "home",
+            "gallery"
+          ],
+          "cid": "bafybeictcqxbcmlgwa57k5qxunhkzdj4vheb5rp3wp4tpzzchezjf3nu5e"
         }
       ]
     }

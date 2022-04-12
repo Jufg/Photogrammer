@@ -1,6 +1,6 @@
 import React from "react";
 import {Layout} from "../components";
-import {home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
+import {gallery_bg_svg, home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
 import {useNavigate} from "react-router-dom";
 import {useFetchImg} from "../hooks/useFetch";
 import {arraySplit} from "../utils/array.utils";
@@ -15,7 +15,7 @@ const Home = () => {
     </Layout>);
 }
 
-const SectionHome = () =>   {
+const SectionHome = () => {
     return (<section id="home" className="md:h-screen px-6 md:px-[20%] mt-20 mb-20">
         <div className="w-full flex justify-center md:justify-end">
             <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
@@ -96,14 +96,15 @@ const SectionGallery = () => {
     const imgStyles = 'w-auto md:w-1/4 my-4 px-5 md:px-0 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
     return (<section id="Gallery" className="px-6 pt-5 md:pt-[10vh] md:px-[20%]">
-        <div className="flex flex-col w-full mb-[5%]">
+        <div className="relative flex flex-col w-full mb-[5%]">
             <div className="h-fit w-fit self-end flex flex-col items-end">
                 <h2 className="font-medium text-2xl md:text-4xl mb-2 w-fit">Gallery</h2>
                 <h3 className="font-light md:text-2xl">Some Images i took...</h3>
             </div>
-            <div className="flex flex-col mt-10">
+            <div className="flex flex-col mt-10 ">
                 {images.map((item, index) => (
-                    <div key={index} className="flex flex-col md:flex-row items-center justify-between py-0 md:py-10 px-4 z-10">
+                    <div key={index}
+                         className="flex flex-col md:flex-row items-center justify-between py-0 md:py-10 px-4 z-10">
                         {item.map((item, index) => (
                             <a key={index} href="/gallery" className={imgStyles}>
                                 <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
@@ -112,6 +113,9 @@ const SectionGallery = () => {
                         ))}
                     </div>
                 ))}
+            </div>
+            <div>
+                <img src={gallery_bg_svg} alt="gallery bg svg" className="absolute mt-20 -translate-x-1/4 md:-translate-x-1/2 -translate-y-[110%] md:-translate-y-full"/>
             </div>
         </div>
     </section>)

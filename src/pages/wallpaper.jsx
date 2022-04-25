@@ -1,12 +1,14 @@
-import React from "react";
-import {Layout} from "../components";
+import React, {useState} from "react";
+import {Dropdown, Layout} from "../components";
 import {wallpaper_home_svg} from "../rsc/svg";
+import {useFetchImg} from "../hooks/useFetch";
 
 const Wallpaper = () => {
 
     return (
         <Layout>
             <SectionHome/>
+            <SectionWallpapers/>
         </Layout>
     )
 }
@@ -25,5 +27,28 @@ const SectionHome = () => {
     </section>)
 }
 
+const SectionWallpapers = () => {
+
+    const [format, setFormat] = useState('16:9')
+
+    const images = useFetchImg(["home", "wallpaper"], 'sm');
+
+    const imgStyles = 'w-2/3 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+
+    return (<section id="Wallpaper" className="md:h-screen px-6 md:px-[20%]">
+        <div className="flex flex-col w-full">
+            <div className="h-fit w-fit flex flex-row items-center">
+                <h3 className="font-light h-full md:text-2xl">Choose your format:</h3>
+                <div className="ml-2 md:ml-10"><Dropdown selected={format} setSelected={setFormat} options={['16:9', '21:9']}/></div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4">
+                {images.map((item, index) => (<a key={index} href="/wallpaper" className={imgStyles}>
+                    <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
+                         className="rounded-2xl"/>
+                </a>))}
+            </div>
+        </div>
+    </section>);
+}
 
 export default Wallpaper

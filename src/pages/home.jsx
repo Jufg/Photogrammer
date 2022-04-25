@@ -75,7 +75,7 @@ const SectionPortfolio = () => {
                         <div className="flex flex-col justify-center">
                             <button
                                 onClick={routeChange}
-                                className={`px-4 py-2 h-fit font-semibold text-lg ${bg.white_glassmorphism} hover:underline blue-animate text-white rounded-lg shadow-sm hover:-translate-y-1 hover:scale-110 hover: ease-in-out delay-150 duration-300`}>
+                                className={`px-4 py-2 h-fit font-semibold text-lg ${bg.white_glassmorphism} hover:underline blue-animate text-white rounded-lg shadow-sm hover:-translate-y-1 hover:scale-110 ease-in-out delay-150 duration-300`}>
                                 Explore my projects and skills!
                             </button>
                         </div>

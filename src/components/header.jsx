@@ -28,7 +28,7 @@ const Header = () => {
         <div className="mt-10 md:mt-28 px-4 md:px-[20%]">
             <nav className="w-auto flex justify-between items-baseline">
                 <div className="">
-                    <span className="font-medium text-xl xl:text-4xl"><a href="/">Photogrammer</a></span>
+                    <span className="font-medium text-xl xl:text-4xl"><a href="/src/pages">Photogrammer</a></span>
                 </div>
                 <div className="flex relative">
                     {toggleMenu ? <AiOutlineClose fontSize={28} className="md:hidden cursor-pointer"
@@ -43,7 +43,7 @@ const Header = () => {
                                 <AiOutlineClose onClick={() => setToggleMenu(false)}/>
                             </li>
                             <li className={`mx-4 cursor-pointer hover:text-[#707070] my-2 text-lg`}>
-                                <a href="/">
+                                <a href="/src/pages">
                                     Home
                                 </a>
                             </li>

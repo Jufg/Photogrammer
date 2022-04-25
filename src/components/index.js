@@ -1,4 +1,4 @@
 export {default as Layout} from './layout';
-export {default as Header} from './Header/header';
-export {default as Footer} from './Footer/footer'
-
+export {default as Header} from './header';
+export {default as Footer} from './footer';
+export {default as Dropdown} from './Dropdown';

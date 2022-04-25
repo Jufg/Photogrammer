@@ -115,7 +115,8 @@ const SectionGallery = () => {
                 ))}
             </div>
             <div>
-                <img src={gallery_bg_svg} alt="gallery bg svg" className="absolute mt-20 -translate-x-1/4 md:-translate-x-1/2 -translate-y-[110%] md:-translate-y-full"/>
+                <img src={gallery_bg_svg} alt="gallery bg svg"
+                     className="absolute mt-20 -translate-x-1/4 md:-translate-x-1/2 -translate-y-[110%] md:-translate-y-full"/>
             </div>
         </div>
     </section>)

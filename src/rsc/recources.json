@@ -1,5 +1,5 @@
 {
-  "name": "IPFS - Recources",
+  "title": "IPFS - Recources",
   "rsc": [
     {
       "type": "img",
@@ -140,6 +140,60 @@
             "gallery"
           ],
           "cid": "bafybeictcqxbcmlgwa57k5qxunhkzdj4vheb5rp3wp4tpzzchezjf3nu5e"
+        },
+        {
+          "name": "IMG_monaco_og_16-9",
+          "alt": "Sunrise in Monaco",
+          "format": "16:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeiaimy4fxjj5azl2rovwmm4lc6kpmfakoiqnz3g43ife5tslmg3dwm"
+        },
+        {
+          "name": "IMG_corse_og_16-9",
+          "alt": "The Coast of Corsica",
+          "format": "16:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeih5dq4q3vp3yynfdjqromxmazpidab5gan3epefjxpocimcut5w7i"
+        },
+        {
+          "name": "IMG_lambo_og_16-9",
+          "alt": "Lamborghini in Hamburg",
+          "format": "16:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeifhea6kuenzwdtpohrzp5fq6uok45mhmkhqiydcsanshxqgialugy"
+        },
+        {
+          "name": "IMG_monaco_og_21-9",
+          "alt": "Sunrise in Monaco",
+          "format": "21:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeiac2fzv2a6dzqr77kg5hvargcsu6itr3fhgmjdkri5mjnfo4gvvqq"
+        },
+        {
+          "name": "IMG_corse_og_21-9",
+          "alt": "The Coast of Corsica",
+          "format": "21:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeid4op7d7yn4u3kccybifcaj3wkhwonaujq3vw52vtw5bj73do6vve"
+        },
+        {
+          "name": "IMG_lambo_og_21-9",
+          "alt": "Lamborghini in Hamburg",
+          "format": "21:9",
+          "pages": [
+            "wallpaper"
+          ],
+          "cid": "bafybeigx6vu7yzuqhqk23mzvxwgccucs46sbvlwjavd5wcbxvlxexstldq"
         }
       ]
     }

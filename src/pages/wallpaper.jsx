@@ -39,7 +39,8 @@ const SectionWallpapers = () => {
         <div className="flex flex-col w-full">
             <div className="h-fit w-fit flex flex-row items-center">
                 <h3 className="font-light h-full md:text-2xl">Choose your format:</h3>
-                <div className="ml-2 md:ml-10"><Dropdown selected={format} setSelected={setFormat} options={['16:9', '21:9']}/></div>
+                <div className="ml-2 md:ml-10"><Dropdown selected={format} setSelected={setFormat}
+                                                         options={['16:9', '21:9']}/></div>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4">
                 {images.map((item, index) => (<a key={index} href="/wallpaper" className={imgStyles}>

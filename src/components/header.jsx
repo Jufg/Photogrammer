@@ -28,7 +28,7 @@ const Header = () => {
         <div className="mt-10 md:mt-28 px-4 md:px-[20%]">
             <nav className="w-auto flex justify-between items-baseline">
                 <div className="">
-                    <span className="font-medium text-xl xl:text-4xl"><a href="/src/pages">Photogrammer</a></span>
+                    <span className="font-medium text-xl xl:text-4xl"><a href="/">Photogrammer</a></span>
                 </div>
                 <div className="flex relative">
                     {toggleMenu ? <AiOutlineClose fontSize={28} className="md:hidden cursor-pointer"

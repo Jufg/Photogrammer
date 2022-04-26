@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Web3Storage} from "web3.storage";
 import rsc from '../rsc/recources.json';
-import {arraysEqual} from "../utils/array.utils";
+import {arraysIncludes} from "../utils/array.utils";
 
 const APIKEY = process.env.REACT_APP_WEB3_STORAGE_API;
 
@@ -18,7 +18,7 @@ export const useFetchImg = (pages, size) => {
     switch (size) {
         case 'sm':
             rsc.rsc[0].small.map(async (item, index) => {
-                if (arraysEqual(item.pages, pages)) {
+                if (arraysIncludes(item.pages, pages)) {
 
                     let img = {
                         name: item.name,
@@ -34,7 +34,7 @@ export const useFetchImg = (pages, size) => {
             return array;
         case 'og':
             rsc.rsc[0].original.map(async (item, index) => {
-                if (arraysEqual(item.pages, pages)) {
+                if (arraysIncludes(item.pages, pages)) {
 
                     let img = {
                         index,

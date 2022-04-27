@@ -30,10 +30,42 @@ const SectionHome = () => {
 
 const SectionWallpapers = () => {
 
-    const [format, setFormat] = useState('16:9')
+    const compareByName = (a, b) => {
+        let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
 
-    const images = arraySplit(useFetchImg(["wallpaper"], 'sm'), 3);
-    //const images_og = arraySplit(useFetchImg(["wallpaper"], 'og'), 3);
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    }
+
+    const [format, setFormat] = useState('16:9')
+    const images = arraySplit(useFetchImg(["wallpaper"], 'sm').sort((a, b) =>
+        compareByName(a, b)
+    ), 3);
+
+    const images_og = useFetchImg(["wallpaper"], 'og');
+
+    const getOgIMG = (index) => {
+        let [images_og_16_9, images_og_21_9] = [
+            images_og.filter(img => img.format === '16:9').sort((a, b) =>
+                compareByName(a, b)
+            ),
+            images_og.filter(img => img.format === '21:9').sort((a, b) =>
+                compareByName(a, b)
+            )
+        ]
+
+        if (format === '16:9') {
+            return images_og_16_9[index].img_cid
+        } else if (format === '21:9') {
+            return images_og_21_9[index].img_cid
+        }
+    }
 
     const imgStyles = 'w-2/3 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
 
@@ -45,14 +77,15 @@ const SectionWallpapers = () => {
                                                          options={['16:9', '21:9']}/></div>
             </div>
             <div className="mt-20 md:mt-0">
-                {images.map((item, index) => (
-                    <div key={index}
+                {images.map((item, index0) => (
+                    <div key={index0}
                          className="flex flex-col md:flex-row items-center justify-between mt-0 md:mt-20 px-4">
-                        {item.map((item, index) => (
-                            <div key={index} onClick={window.open(`https://ipfs.io/ipfs/${item.img_cid}`)} className={imgStyles} download="">
-                                <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
+                        {item.map((item, index1) => (
+                            <a key={index1} href={`https://ipfs.io/ipfs/${getOgIMG(item.index)}`} target="_blank"
+                               className={imgStyles} download="">
+                                <img key={index1} src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
                                      className="rounded-2xl"/>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 ))}

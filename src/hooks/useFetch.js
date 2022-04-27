@@ -15,18 +15,23 @@ export const useFetchImg = (pages, size) => {
 
     let array = [];
 
+    let count = 0;
+
     switch (size) {
         case 'sm':
             rsc.rsc[0].small.map(async (item, index) => {
                 if (arraysIncludes(item.pages, pages)) {
 
                     let img = {
+                        index: count,
+                        format: item.format,
                         name: item.name,
                         alt: item.alt,
                         cid: item.cid,
                         img_cid: FetchCid(item.cid)
                     }
 
+                    count++;
                     array.push(img)
                 }
             })
@@ -37,13 +42,15 @@ export const useFetchImg = (pages, size) => {
                 if (arraysIncludes(item.pages, pages)) {
 
                     let img = {
-                        index,
+                        index: count,
+                        format: item.format,
                         name: item.name,
                         alt: item.alt,
                         cid: item.cid,
                         img_cid: FetchCid(item.cid)
                     }
 
+                    count++;
                     array.push(img)
                 }
             })

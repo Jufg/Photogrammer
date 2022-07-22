@@ -12,8 +12,8 @@ const App = () => {
                 {/* <Route path="/wallpaper" element={<Wallpaper />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route path="/publications" element={<Publications />} />
-                <Route path="/imprint" element={<Imprint />} />*/}
+                <Route path="/publications" element={<Publications />} /*/}
+                <Route path="/imprint" element={<Imprint />} />
                 <Route path="*" element={<ErrorPage404/>}/>
             </Routes>
         </Router>

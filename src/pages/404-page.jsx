@@ -6,7 +6,7 @@ const ErrorPage404 = () => {
 
     return (
         <Layout>
-            <section id="home" className="md:h-fit px-6 md:px-[20%] mt-20 mb-20">
+            <section id="404" className="md:h-fit px-6 md:px-[20%] mt-20 mb-20">
                 <div className="w-full flex justify-center md:justify-end">
                     <img src={under_construction_svg} alt="Home svg" className="md:w-2/3 w-full"/>
                 </div>

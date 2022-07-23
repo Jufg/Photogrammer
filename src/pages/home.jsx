@@ -4,10 +4,16 @@ import {gallery_bg_svg, home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg
 import {useNavigate} from "react-router-dom";
 import {useFetchImg} from "../hooks/useFetch";
 import {arraySplit} from "../utils/array.utils";
+import {Helmet} from "react-helmet";
 
 const Home = () => {
 
     return (<Layout>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Photogrammer</title>
+            <link rel="canonical" href="https://photogrammer.dev/" />
+        </Helmet>
         <SectionHome/>
         <SectionWallpaper/>
         <SectionPortfolio/>
@@ -16,11 +22,11 @@ const Home = () => {
 }
 
 const SectionHome = () => {
-    return (<section id="home" className="md:h-screen px-6 md:px-[20%] mt-20 mb-20">
+    return (<section id="home" className="md:h-fit px-6 md:px-[20%] mt-20 mb-40">
         <div className="w-full flex justify-center md:justify-end">
             <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
         </div>
-        <div className="h-fit mt-[33%] md:mt-0">
+        <div className="h-fit mt-[20%] md:mt-0">
             <h1 className="font-medium text-3xl md:text-5xl mb-2">Photogramming</h1>
             <h2 className="font-light text-xl md:text-3xl">Photography and Programming</h2>
         </div>

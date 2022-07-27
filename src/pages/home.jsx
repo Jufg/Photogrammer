@@ -26,7 +26,7 @@ const SectionHome = () => {
         <div className="w-full flex justify-center md:justify-end">
             <img src={home_svg} alt="Home svg" className="md:w-2/3 w-full"/>
         </div>
-        <div className="h-fit mt-[20%] md:mt-0">
+        <div className="h-fit mt-[20%] md:-mt-32">
             <h1 className="font-medium text-3xl md:text-5xl mb-2">Photogramming</h1>
             <h2 className="font-light text-xl md:text-3xl">Photography and Programming</h2>
         </div>

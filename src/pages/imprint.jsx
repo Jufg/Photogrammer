@@ -61,21 +61,21 @@ const Imprint = () => {
                 </div>
                 <div className="w-2/3 mt-14">
                     <p className="text-xl">
-                        <strong>Widerspruch Werbe-Mails:</strong>
+                        <strong>Objection to advertising e-mails:</strong>
                     </p>
                     <p className="text-lg mt-3">
-                        Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur
-                        Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird
-                        hiermit widersprochen. Der Betreiber der Seiten behält sich ausdrücklich rechtliche Schritte
-                        im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+                        The use of contact data published within the scope of the imprint obligation to send advertising
+                        and information material that has not been expressly requested is hereby prohibited. The
+                        operator of the pages expressly reserves the right to take legal action in the event of the
+                        unsolicited sending of advertising information, such as spam e-mails.
                     </p>
                 </div>
                 <div className="w-2/3 mt-14">
                     <p className="text-xl">
-                        <strong>Social Media Präsenz:</strong>
+                        <strong>Social media presence:</strong>
                     </p>
                     <p className="text-lg mt-3">
-                        Dieses Impressum gilt auch für den Instagram-Account „_photogrammer_“.
+                        This imprint also applies to the Instagram account "_photogrammer_".
                     </p>
                 </div>
             </div>

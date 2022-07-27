@@ -1,7 +1,6 @@
 # Photogrammer
 
 I provide the code in this repository for download and inspiration.
-___
 
 ## Website
 
@@ -10,13 +9,11 @@ Click here for the website: [photogrammer.dev](https://photogrammer.dev)
 ## E-Mail
 
 [info@photogrammer.dev](mailto:info@photogrammer.dev)
-___
 
 ## Pictures
 
 All embedded photos were taken by Juri Kembügler, if not otherwise noted, and are subject to the copyright. Any use
 requires written consent.
-___
 
 ## Disclaimer and terms of use
 
@@ -33,7 +30,6 @@ party websites. The operators of linked sites are solely responsible for their c
 
 This website was created with the greatest possible care. Nevertheless, freedom from errors and correctness of the
 information cannot be guaranteed. Liability claims are therefore completely excluded.
-___
 
 ## Copyright naming
 
@@ -45,7 +41,6 @@ All vector graphics used on this website originate from the online platform [Und
 
 All icons used on this website are from the online platform [fonawesomme.com](https://fontawesome.com/).
 
-___
 
 ## Objection to advertising e-mails
 

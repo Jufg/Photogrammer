@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Mono", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.white-glassmorphism {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Button hover animation */
+.blue-animate:hover {
+    background-color: hsla(146, 100%, 80%, 0.3);
+    background-image: radial-gradient(at 73% 58%, hsla(315, 78%, 79%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 53% 12%, hsla(227, 97%, 77%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 20% 64%, hsla(203, 84%, 76%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 68% 54%, hsla(233, 93%, 79%, 0.3) 0px, transparent 50%);
+    background-size: 400% 400%;
+
+    -webkit-animation: btn-bg 3s ease infinite;
+    -moz-animation: btn-bg 3s ease infinite;
+    animation: btn-bg 3s ease infinite;
+}
+
+@-webkit-keyframes btn-bg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes btn-bg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes btn-bg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/* Tailwind configuration */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -17,11 +17,11 @@ const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     const menu = [
-        {title: "Wallpaper", path: "/wallpaper"},
-        {title: "Portfolio", path: "/portfolio"},
-        {title: "Gallery", path: "/gallery"},
-        {title: "Publications", path: "/publications"},
-        {title: "Imprint", path: "/imprint"}
+        {title: "Wallpaper", path: "#/wallpaper"},
+        {title: "Portfolio", path: "#/portfolio"},
+        {title: "Gallery", path: "#/gallery"},
+        {title: "Publications", path: "#/publications"},
+        {title: "Imprint", path: "#/imprint"}
     ];
 
     return (

@@ -1,59 +1,57 @@
 # Photogrammer
 
-Ich stelle in diesem Repository den Code zum Download und zur Inspiration zur Verfügung.
-___
+I provide the code in this repository for download and inspiration.
 
-## Website:
+## Website
 
-Hier geht es zur Webseite: [photogrammer.dev](https://photogrammer.dev)
+Click here for the website: [photogrammer.dev](https://photogrammer.dev)
 
-## E-Mail:
+## E-Mail
 
-<info@photogrammer.dev>
-___
+[info@photogrammer.dev](mailto:info@photogrammer.dev)
 
-## Fotografien:
+## Pictures
 
-Alle eingebundenen Fotos wurden aufgenommen von Juri Kembügler, falls nicht anderweitig vermerkt, und unterliegen dem
-Urheberrecht. Jegliche Nutzung bedarf der schriftlichen Zustimmung.
-___
+All embedded photos were taken by Juri Kembügler, if not otherwise noted, and are subject to the copyright. Any use
+requires written consent.
 
-## Haftungshinweis und Nutzungsbedingungen:
+## Disclaimer and terms of use
 
-Inhalt und Gestaltung dieser Webseite sind urheberrechtlich geschützt. Vervielfältigung, Veränderung, Weitergabe,
-Unterlizenzierung u.ä. sind nur mit schriftlicher Genehmigung gestattet. Dies gilt auch für die Aufnahme in
-elektronische Datenbanken und Vervielfältigung auf elektronischen Datenträgern.
+The content and design of this website are protected by copyright. Reproduction, modification, distribution,
+sub-licensing and the like are only permitted with written consent. This also applies to inclusion in electronic
+databases and reproduction on electronic data carriers.
 
-Beachten Sie, dass auf dieser Webseite Worte oder Zeichen – Marken-, Patent- oder Warenzeichen – rechtlichem Schutz
-unterliegen können. Soweit diese den Rechten anderer unterliegen, verwenden wir diese ausschließlich zur Information und
-keinesfalls zur Herbeiführung eines Vorteils.
+Please note that words or signs - brand names, patents or trademarks - on this website may be subject to legal
+protection. Insofar as these are subject to the rights of others, we use them solely for information purposes and in no
+way to gain an advantage.
 
-Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Verantwortung für externe Informationen oder Links zu
-Internetseiten Dritter. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
+Despite careful control of the content, I do not accept any responsibility for external information or links to third
+party websites. The operators of linked sites are solely responsible for their content.
 
-Diese Webseite wurde mit größtmöglicher Sorgfalt erstellt. Dennoch können Fehlerfreiheit und Richtigkeit der
-Informationen nicht garantiert. Haftungsansprüche werden daher vollständig ausgeschlossen.
-___
+This website was created with the greatest possible care. Nevertheless, freedom from errors and correctness of the
+information cannot be guaranteed. Liability claims are therefore completely excluded.
 
-## Urheberbennenung:
+## Copyright naming
 
-### Grafiken:
+### Graphics:
 
-Alle Vektor-Grafiken, die auf dieser Webseite genutzt werden, stammen von der
-Online-Plattform [Undraw.co](https://Undraw.co/).
+All vector graphics used on this website originate from the online platform [Undraw.co](https://Undraw.co/).
 
 ### Icons:
 
-Alle verwendeten Icons dieser Webseite sind von der Online-Plattform [fonawesomme.com](https://fontawesome.com/).
+All icons used on this website are from the online platform [fonawesomme.com](https://fontawesome.com/).
 
-### Code:
 
-Die Lightbox in meiner Galerie wurde von [Lokesh Dhakar](https://lokeshdhakar.com/projects/lightbox2/) erstellt.
-___
+## Objection to advertising e-mails
 
-## Widerspruch Werbe-Mails:
+The use of contact data published within the scope of the imprint obligation to send advertising and information
+material that has not been expressly requested is hereby prohibited. The operator of the pages expressly reserves the
+right to take legal action in the event of the unsolicited sending of advertising information, such as spam e-mails.
 
-Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich
-angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Der Betreiber der Seiten behält sich
-ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails,
-vor.
+## Branches
+
+| Branch                                                                                 | Usage                                                                        |
+|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [master](https://github.com/Jufg/Photogrammer/tree/master)                             | The master branch is the default branch and contains the latest release.     |
+| [preview](https://github.com/Jufg/Photogrammer/tree/preview)                           | Preview contains the current development status of a preview of version 2.0. |
+| [dev-photogrammer-2.0](https://github.com/Jufg/Photogrammer/tree/dev-photogrammer-2.0) | dev-photogrammer-2.0 contains the current development status of version 2.0. |

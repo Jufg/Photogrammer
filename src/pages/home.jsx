@@ -46,7 +46,7 @@ const SectionWallpaper = () => {
                 <h3 className="font-light md:text-2xl">Downnload your Wallpaper now!</h3>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
-                {images.map((item, index) => (<a key={index} href="/wallpaper" className={imgStyles}>
+                {images.map((item, index) => (<a key={index} href="#/wallpaper" className={imgStyles}>
                     <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
                          className="rounded-2xl"/>
                 </a>))}
@@ -112,7 +112,7 @@ const SectionGallery = () => {
                     <div key={index}
                          className="flex flex-col md:flex-row items-center justify-between py-0 md:py-10 px-4 z-10">
                         {item.map((item, index) => (
-                            <a key={index} href="/gallery" className={imgStyles}>
+                            <a key={index} href="#/gallery" className={imgStyles}>
                                 <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
                                      className="rounded-2xl"/>
                             </a>

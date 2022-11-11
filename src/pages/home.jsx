@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components";
+import {Image_Loader, Layout} from "../components";
 import {gallery_bg_svg, home_svg, portfolio_svg, wallpaper_svg} from "../rsc/svg";
 import {useNavigate} from "react-router-dom";
 import {useFetchImg} from "../hooks/useFetch";
@@ -10,9 +10,9 @@ const Home = () => {
 
     return (<Layout>
         <Helmet>
-            <meta charSet="utf-8" />
+            <meta charSet="utf-8"/>
             <title>Photogrammer</title>
-            <link rel="canonical" href="https://photogrammer.dev/" />
+            <link rel="canonical" href="https://photogrammer.dev/"/>
         </Helmet>
         <SectionHome/>
         <SectionWallpaper/>
@@ -46,10 +46,10 @@ const SectionWallpaper = () => {
                 <h3 className="font-light md:text-2xl">Downnload your Wallpaper now!</h3>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-between mt-20 px-4 z-10">
-                {images.map((item, index) => (<a key={index} href="#/wallpaper" className={imgStyles}>
-                    <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
-                         className="rounded-2xl"/>
-                </a>))}
+                {images.map((item, index) => (
+                    <a key={index} href="#/wallpaper" className={imgStyles}>
+                        <Image_Loader src={item.img_cid} alt={item.alt} styles="rounded-2xl"/>
+                    </a>))}
             </div>
             <div>
                 <img src={wallpaper_svg} alt="wallpaper svg"

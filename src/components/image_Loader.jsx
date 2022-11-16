@@ -1,8 +1,8 @@
-import {Ring} from "@uiball/loaders";
+import {LineWobble} from "@uiball/loaders";
 import {useEffect, useState} from "react";
 
 const Image_Loader = ({src, alt, styles}) => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(true);
@@ -11,19 +11,21 @@ const Image_Loader = ({src, alt, styles}) => {
         }, 2000);
     }, []);
 
-    return(
-        <div className="h-[10vh]">
-            {loading ?
-                <Ring
-                    size={40}
+    return (
+        loading ?
+            <div className="flex flex-col items-center justify-between my-40">
+                <LineWobble
+                    size={80}
                     lineWeight={5}
-                    speed={2}
+                    speed={1.75}
                     color="black"
-                />:
-                <img src={`https://ipfs.io/ipfs/${src}`} alt={alt}
-                     className={styles}/>
-            }
-        </div>
+                />
+            </div> :
+            <img src={`https://ipfs.io/ipfs/${src}`}
+                 alt={alt}
+                 onLoad={() => setLoading(false)}
+                 className={styles}/>
+
     )
 }
 

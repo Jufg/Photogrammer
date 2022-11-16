@@ -113,8 +113,7 @@ const SectionGallery = () => {
                          className="flex flex-col md:flex-row items-center justify-between py-0 md:py-10 px-4 z-10">
                         {item.map((item, index) => (
                             <a key={index} href="#/gallery" className={imgStyles}>
-                                <img src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
-                                     className="rounded-2xl"/>
+                                <Image_Loader src={item.img_cid} alt={item.alt} styles="rounded-2xl"/>
                             </a>
                         ))}
                     </div>

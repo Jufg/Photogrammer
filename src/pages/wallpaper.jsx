@@ -1,13 +1,19 @@
 import React, {useState} from "react";
-import {Dropdown, Layout} from "../components";
+import {Dropdown, Image_Loader, Layout} from "../components";
 import {wallpaper_home_svg} from "../rsc/svg";
 import {useFetchImg} from "../hooks/useFetch";
 import {arraySplit} from "../utils/array.utils";
+import {Helmet} from "react-helmet";
 
 const Wallpaper = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8"/>
+                <title>Wallpaper - Photogrammer</title>
+                <link rel="canonical" href="https://photogrammer.dev/"/>
+            </Helmet>
             <SectionHome/>
             <SectionWallpapers/>
         </Layout>
@@ -83,8 +89,7 @@ const SectionWallpapers = () => {
                         {item.map((item, index1) => (
                             <a key={index1} href={`https://ipfs.io/ipfs/${getOgIMG(item.index)}`} target="_blank"
                                className={imgStyles} download="">
-                                <img key={index1} src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt}
-                                     className="rounded-2xl"/>
+                                <Image_Loader key={index1} src={item.img_cid} alt={item.alt} styles="rounded-2xl"/>
                             </a>
                         ))}
                     </div>

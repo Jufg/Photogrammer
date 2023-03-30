@@ -36,10 +36,12 @@ const SectionHome = () => {
 
 const SectionWallpapers = () => {
 
+    const imgStyles = 'w-2/3 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+
     const compareByName = (a, b) => {
+
         let fa = a.name.toLowerCase(),
             fb = b.name.toLowerCase();
-
         if (fa < fb) {
             return -1;
         }
@@ -47,6 +49,7 @@ const SectionWallpapers = () => {
             return 1;
         }
         return 0;
+
     }
 
     const [format, setFormat] = useState('16:9')
@@ -54,9 +57,11 @@ const SectionWallpapers = () => {
         compareByName(a, b)
     ), 3);
 
+    // Muss zu beginn direkt geladen werden
     const images_og = useFetchImg(["wallpaper"], 'og');
 
     const getOgIMG = (index) => {
+
         let [images_og_16_9, images_og_21_9] = [
             images_og.filter(img => img.format === '16:9').sort((a, b) =>
                 compareByName(a, b)
@@ -65,15 +70,13 @@ const SectionWallpapers = () => {
                 compareByName(a, b)
             )
         ]
-
         if (format === '16:9') {
             return images_og_16_9[index].img_cid
         } else if (format === '21:9') {
             return images_og_21_9[index].img_cid
         }
-    }
 
-    const imgStyles = 'w-2/3 md:w-1/4 my-4 md:my-0 hover:scale-105 transition ease-in-out duration-300 cursor-pointer';
+    }
 
     return (<section id="Wallpaper" className="px-6 md:px-[20%]">
         <div className="flex flex-col w-full mb-10">
@@ -89,7 +92,7 @@ const SectionWallpapers = () => {
                         {item.map((item, index1) => (
                             <a key={index1} href={`https://ipfs.io/ipfs/${getOgIMG(item.index)}`} target="_blank"
                                className={imgStyles} download="">
-                                <Image_Loader key={index1} src={item.img_cid} alt={item.alt} styles="rounded-2xl"/>
+                                <Image_Loader key={index1} src={`https://ipfs.io/ipfs/${item.img_cid}`} alt={item.alt} styles="rounded-2xl"/>
                             </a>
                         ))}
                     </div>

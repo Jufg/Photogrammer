@@ -27,10 +27,11 @@ const Image_Loader = ({src, alt, styles}) => {
                         color="black"
                     />
                 </div> :
-                <img src={`https://ipfs.io/ipfs/${src}`}
+                <img src={src}
                      alt={alt}
                      onLoad={() => setLoading(false)}
                      onError={() => setError(true)}
+                     style={{ display: loading ? 'none' : 'block' }}
                      className={styles}
                 />
 
